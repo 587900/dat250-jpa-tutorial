@@ -1,7 +1,7 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
-import java.util.Collection;
 import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,7 +16,6 @@ public class Address {
     private Long id;
     private String street;
     private Integer number;
-    @ManyToMany
-    @JoinTable(name = "Address_Customer", joinColumns = @JoinColumn(name = "Address_id"), inverseJoinColumns = @JoinColumn(name = "Customer_id"))
-    private Collection<Customer> owners = new HashSet<>();
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    private Set<Customer> owners = new HashSet<>();
 }

@@ -19,7 +19,6 @@ public class CreditCard {
     private Integer creditLimit;
     private Integer balance;
     @ManyToMany
-    @JoinTable(name = "Customer_CreditCard", joinColumns = @JoinColumn(name = "CreditCard_id"), inverseJoinColumns = @JoinColumn(name = "Customer_id"))
     private Collection<Customer> customers = new ArrayList<>();
     @ManyToOne
     private Pincode pincode;

@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -15,8 +16,8 @@ public class Bank {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany
-    private Collection<CreditCard> creditCards = new HashSet<>();
+    @OneToMany(mappedBy = "bank")
+    private Set<CreditCard> creditCards = new HashSet<>();
 
     public Collection<CreditCard> getOwnedCards() { return getCreditCards(); }
 }

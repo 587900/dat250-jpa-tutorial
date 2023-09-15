@@ -15,10 +15,8 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @ManyToMany
-    @JoinTable(name = "Address_Customer", joinColumns = @JoinColumn(name = "Customer_id"), inverseJoinColumns = @JoinColumn(name = "Address_id"))
+    @ManyToMany(mappedBy = "owners")
     private Collection<Address> addresses = new ArrayList<>();
-    @ManyToMany
-    @JoinTable(name="Customer_CreditCard", joinColumns = @JoinColumn(name = "Customer_id"), inverseJoinColumns = @JoinColumn(name = "CreditCard_id"))
+    @ManyToMany(mappedBy = "customers")
     private Collection<CreditCard> creditCards = new ArrayList<>();
 }
