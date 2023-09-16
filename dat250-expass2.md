@@ -24,6 +24,9 @@ Hibernate:
         primary key (id)
     )
 ```
-5. From part 2: 'Inspect the database and attach a screenshot. Do the created tables correspond to your initial thoughts?': Yes they correspond. There was no easy way of inspecting the database. Some classmates tried plugins or method of inspecting the 'DB.mv.db' file, but none I met succeeded. I ended up using 'show_sql' and copying the sql code into an online editor named [sqldb](https://sqldbd.com/app). I had to clean out the 'Hibernate:' statements and remove tables from the tutorial, but I got this:
-![Database structure](https://raw.githubusercontent.com/587900/dat250-jpa-tutorial/master/db-sql.png)
+5. From part 2: 'Inspect the database and attach a screenshot. Do the created tables correspond to your initial thoughts?': Yes they correspond.
+There was no easy way of inspecting the database. Some classmates tried plugins or method of inspecting the 'DB.mv.db' file, but none I met succeeded.
+I ended up using 'show_sql' and copying the sql code into an online editor named [sqldb](https://sqldbd.com/app).
 The sql I uploaded to sqldb can be found in the '[db.sql](https://raw.githubusercontent.com/587900/dat250-jpa-tutorial/master/db.sql)' file.
+I had to clean out the 'Hibernate:' statements and remove tables from the tutorial, but I got this:
+![Database structure](https://raw.githubusercontent.com/587900/dat250-jpa-tutorial/master/db-sql.png)
