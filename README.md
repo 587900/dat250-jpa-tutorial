@@ -1,3 +1,7 @@
+# Assignment complete
+
+See the file 'dat250-expass2.md' for details.
+
 # Experiment 2 tests
 
 [![Experiment 2 tests](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
